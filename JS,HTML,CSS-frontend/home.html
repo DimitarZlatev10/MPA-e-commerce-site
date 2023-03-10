@@ -9,6 +9,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>Home</title>
   </head>
   <body>
@@ -31,6 +38,103 @@
     </header>
 
     <!-- header  -->
+
+    <!-- side-bar  -->
+    <div class="side-bar">
+      <div id="close-side-bar" class="fas fa-times"></div>
+
+      <div class="user">
+        <img src="./images/picture.jpg" />
+        <h3>Dimitar Zlatev</h3>
+        <a href="#">Log out</a>
+      </div>
+
+      <nav class="navbar">
+        <a href="home.html"> <i class="fas fa-angle-right"></i>home</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>about</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>products</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>contact</a>
+        <a href="login.html"> <i class="fas fa-angle-right"></i>login</a>
+        <a href="register.html"> <i class="fas fa-angle-right"></i>register</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>cart</a>
+      </nav>
+    </div>
+    <!-- side-bar  -->
+
+    <!-- home  -->
+
+    <section class="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="./images/home-img-1.jpg" />
+            </div>
+            <div class="content">
+              <span>up to 50% off</span>
+              <h3>smartphone</h3>
+              <a href="#" class="btn">shop now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="./images/home-img-2.jpg" />
+            </div>
+            <div class="content">
+              <span>up to 50% off</span>
+              <h3>smartwatch</h3>
+              <a href="#" class="btn">shop now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <img src="./images/home-img-3.jpg" />
+            </div>
+            <div class="content">
+              <span>up to 50% off</span>
+              <h3>headphones</h3>
+              <a href="#" class="btn">shop now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- home  -->
+
+    <!-- footer  -->
+
+    <section class="quick-links">
+      <a href="home.html" class="logo"><i class="fas fa-store"></i>Shopie </a>
+
+      <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">products</a>
+        <a href="#">contact</a>
+        <a href="#">login</a>
+        <a href="#">register</a>
+        <a href="#">cart</a>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </section>
+
+    <section class="credit">
+      <p>created by <span>Kirila Ilieva</span> | all rights reserved!</p>
+      <img src="./images/card_img.png" alt="" />
+    </section>
+    <!-- footer  -->
 
     <!-- js -->
     <script src="./pages-script/home.js"></script>
