@@ -43,6 +43,16 @@ const productSchema = new Schema({
     ref: "User",
     default: [],
   },
+  comments: {
+    type: [ObjectId],
+    ref: "User",
+    default: [],
+  },
+  rating: {
+    type: [ObjectId],
+    ref: "User",
+    default: [],
+  },
 });
 
 const Product = model("Product", productSchema);

@@ -40,6 +40,36 @@ const createProduct = async (req, res, next) => {
   return res.status(201).json(product);
 };
 
+const getAllProducts = async (req, res, next) => {
+  let products;
+  try {
+    products = await Product.find();
+  } catch (err) {
+    return next(err);
+  }
+  if (!products) {
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+
+  return res.status(200).json(products);
+};
+
+const getProductById = async (req, res, next) => {
+  const { id } = req.body;
+  let product;
+  try {
+    product = await Product.findById(id);
+  } catch (err) {
+    return next(err);
+  }
+  if (!product) {
+    return res.status(500).json({ message: "Unable to find product" });
+  }
+  return res.status(200).json(product);
+};
+
 module.exports = {
   createProduct,
+  getAllProducts,
+  getProductById,
 };
