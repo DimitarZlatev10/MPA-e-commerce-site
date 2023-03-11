@@ -68,8 +68,25 @@ const getProductById = async (req, res, next) => {
   return res.status(200).json(product);
 };
 
+const addProductComment = async (req, res, next) => {
+  const { username, rating, comment, userId, productId } = req.body;
+  const product = await Product.findById(productId);
+
+  product.comments.push({
+    username: username,
+    rating: rating,
+    comment: comment,
+    owner: userId,
+  });
+
+  await product.save();
+
+  return res.status(200).json({ message: "Successfully added review!" });
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
   getProductById,
+  addProductComment,
 };

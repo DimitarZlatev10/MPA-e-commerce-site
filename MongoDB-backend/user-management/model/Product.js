@@ -44,7 +44,7 @@ const productSchema = new Schema({
     default: [],
   },
   comments: {
-    type: [ObjectId],
+    type: [],
     ref: "User",
     default: [],
   },
