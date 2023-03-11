@@ -1,3 +1,4 @@
+//users
 export async function register(firstName, lastName, image, email, password) {
   fetch("http://localhost:3000/users/register", {
     method: "POST",
@@ -58,3 +59,6 @@ export async function login(email, password) {
       }
     });
 }
+
+//products
+
