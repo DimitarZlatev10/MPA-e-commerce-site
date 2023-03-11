@@ -1,3 +1,5 @@
+import { addProductComment } from "../api/api.js";
+
 window.onload = async (event) => {
   fetch("http://localhost:3000/products/getProductById", {
     method: "POST",
@@ -55,6 +57,16 @@ closeButton.addEventListener("click", () => {
 
 //review
 const reviewForm = document.querySelector(".comment-form");
-reviewForm.addEventListener("submit", (e) => {
+reviewForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  await addProductComment(
+    e.target[0].value,
+    e.target[1].value,
+    e.target[2].value,
+    JSON.parse(sessionStorage.getItem("userData")).id,
+    JSON.parse(localStorage.productId)
+  );
+
+  window.location = "details.html";
 });
