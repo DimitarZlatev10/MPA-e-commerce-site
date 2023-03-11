@@ -209,7 +209,7 @@
   background: no-repeat center
     url("https://cdn.dribbble.com/users/474089/screenshots/3370205/attachments/733020/desktop-wallpaper-kiwi.jpg");
 
-    height: 700px;
+  height: 700px;
 }
 
 .login-form {
@@ -274,13 +274,261 @@
 
 /* login  */
 
+/* details  */
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat center
+    url("https://cdn.dribbble.com/users/474089/screenshots/3370205/attachments/733020/desktop-wallpaper-kiwi.jpg");
+  /* height: 1100px; */
+}
+
+.product-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 1400px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+
+.product-container > img {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  width: 500px;
+  height: 500px;
+}
+
+.product-container > h1 {
+  position: absolute;
+  left: 70%;
+  top: 50px;
+  font-size: 45px;
+}
+
+.product-container > p {
+  position: absolute;
+  left: 600px;
+  top: 100px;
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+  color: purple;
+}
+
+.product-container > h2 {
+  position: absolute;
+
+  left: 75%;
+  top: 150px;
+  color: red;
+  font-size: 30px;
+}
+
+.product-container > button {
+  position: absolute;
+  left: 75%;
+  top: 220px;
+  padding: 15px 30px 15px 30px;
+  border: none;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.709);
+  background-color: rgb(0, 247, 255);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.product-container > button:hover {
+  color: red;
+}
+
+.product-container > h3 {
+  position: absolute;
+  left: 70%;
+  top: 350px;
+  width: 350px;
+  text-align: center;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  width: 400px;
+}
+
+.comment-form > h1 {
+  font-size: 30px;
+  padding: 10px 0 0 10px;
+}
+
+.rating-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-container > #username {
+  border: 1px solid pink;
+  width: 200px;
+  padding: 10px 10px 10px 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.rating-container > #username::placeholder {
+  font-size: 15px;
+}
+
+.rating-container > #rating {
+  border: 1px solid pink;
+  width: 80px;
+  padding: 10px 10px 10px 5px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.rating-container > #rating::placeholder{
+  font-size: 15px;
+}
+
+.comment-form > #comment {
+  border: 1px solid pink;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  padding: 5px 0 100px 5px;
+}
+
+.comment-form > #comment::placeholder {
+  font-size: 15px;
+}
+
+.comment-form > button {
+  width: 120px;
+  padding: 10px 15px 10px 15px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.comment-form > button:hover {
+  background-color: lightblue;
+}
+
+/* details-payment  */
+.payment {
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.payTitle {
+  font-size: 20px;
+  color: lightgray;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.payInput {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder {
+  color: rgb(170, 167, 167);
+}
+
+.cardIcons {
+  display: flex;
+}
+
+.cardIcon {
+  margin-right: 10px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40px;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.payButton:hover {
+  background-color: green;
+}
+
+.close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+/* details-payment */
+
+/* details  */
+
 /* home  */
 .home {
   background-color: white;
 }
 
 .swiper-button-next {
-  padding-right: 30px;
+  padding-right: 100px;
 }
 
 .swiper-button-prev {
@@ -322,11 +570,23 @@
   font-weight: bold;
 }
 
+.content > p {
+  color: red;
+  font-size: 35px;
+  padding-top: 15px;
+}
+
 .content > h3 {
   color: black;
   font-size: 30px;
   margin-top: 10px;
   margin-bottom: 25px;
+}
+
+.content > h4 {
+  padding-bottom: 30px;
+  font-size: 15px;
+  color: purple;
 }
 
 .btn {

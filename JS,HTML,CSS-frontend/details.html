@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Product Details</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header">
+      <a href="home.html" class="logo"
+        ><i class="fas fa-kiwi-bird"></i>Kiwie
+      </a>
+
+      <form action="" class="search-form">
+        <input type="search" id="form-input" placeholder="Search..." />
+        <label for="form-input" class="fas fa-search"></label>
+      </form>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-user"></a>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+      </div>
+    </header>
+
+    <!-- header  -->
+
+    <!-- side-bar  -->
+    <div class="side-bar">
+      <div id="close-side-bar" class="fas fa-times"></div>
+
+      <div class="user">
+        <img src="./images/picture.jpg" />
+        <h3>Dimitar Zlatev</h3>
+        <a href="#">Log out</a>
+      </div>
+
+      <nav class="navbar">
+        <a href="home.html"> <i class="fas fa-angle-right"></i>home</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>about</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>products</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>contact</a>
+        <a href="login.html"> <i class="fas fa-angle-right"></i>login</a>
+        <a href="register.html"> <i class="fas fa-angle-right"></i>register</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>cart</a>
+      </nav>
+    </div>
+    <!-- side-bar  -->
+
+    <!-- details  -->
+
+    <div class="details-container">
+      <div class="product-container">
+        <img src="./images/product-1.jpg" alt="" />
+        <h1>Iphone 12 pro</h1>
+        <!-- <p>The newest and best iphone 12</p> -->
+        <h2>Price: 1200$</h2>
+        <button>Buy Now!</button>
+        <h3>
+          The newest and best iphone 12 pro, dive in the best experince of your
+          life with the best features!
+        </h3>
+
+        <div class="payment">
+          <h1 class="payTitle">Personal Information</h1>
+          <label>Name and Surname</label>
+          <input type="text" placeholder="John Doe" class="payInput" />
+
+          <label>Phone Number</label>
+          <input type="text" placeholder="+1 234 5678" class="payInput" />
+
+          <label>Address</label>
+          <input
+            type="text"
+            placeholder="Elton St 21 22-145"
+            class="payInput"
+          />
+          <h1 class="payTitle">Card Information</h1>
+          <div class="cardIcons">
+            <img src="./images/visa.png" width="40" class="cardIcon" />
+            <img src="./images/master.png" width="40" class="cardIcon" />
+          </div>
+          <input type="password" class="payInput" placeholder="Card Number" />
+          <div class="cardInfo">
+            <input type="text" placeholder="mm" class="payInput sm" />
+            <input type="text" placeholder="yyyy" class="payInput sm" />
+            <input type="text" placeholder="cvv" class="payInput sm" />
+          </div>
+          <button class="payButton">Checkout!</button>
+          <span class="close">X</span>
+        </div>
+
+        <div class="comment-section">
+          <form action="" class="comment-form">
+            <h1>Leave your review here!</h1>
+            <div class="rating-container">
+              <input
+                type="text"
+                id="username"
+                class="form-input"
+                placeholder="Username..."
+              />
+
+              <input
+                type="number"
+                id="rating"
+                class="form-input"
+                placeholder="Rate 0/5"
+                min="1"
+                max="5"
+              />
+            </div>
+
+            <input
+              type="text"
+              id="comment"
+              class="form-input"
+              placeholder="Your Comment..."
+            />
+
+            <button type="submit">Comment!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- details  -->
+
+    <!-- footer  -->
+
+    <section class="quick-links">
+      <a href="home.html" class="logo"
+        ><i class="fas fa-kiwi-bird"></i>Kiwie
+      </a>
+
+      <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">products</a>
+        <a href="#">contact</a>
+        <a href="login.html">login</a>
+        <a href="register.html">register</a>
+        <a href="#">cart</a>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </section>
+
+    <section class="credit">
+      <p>created by <span>Kirila Ilieva</span> | all rights reserved!</p>
+      <img src="./images/card_img.png" alt="" />
+    </section>
+    <!-- footer  -->
+
+    <!-- js -->
+    <script src="./pages-script/details.js" type="module"></script>
+  </body>
+</html>
