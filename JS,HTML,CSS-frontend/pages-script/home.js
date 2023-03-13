@@ -1,3 +1,5 @@
+import { checkForUser } from "../utils/menuFunction.js";
+
 //menu
 const menuBar = document.getElementById("menu-btn");
 const sideBarMenu = document.querySelector(".side-bar");
@@ -25,6 +27,8 @@ new Swiper(".home-slider", {
 });
 
 window.onload = async (event) => {
+  checkForUser();
+
   fetch("http://localhost:3000/products", {
     headers: {
       Accept: "application/json",
