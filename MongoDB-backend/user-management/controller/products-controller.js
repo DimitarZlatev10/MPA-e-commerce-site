@@ -69,7 +69,8 @@ const getProductById = async (req, res, next) => {
 };
 
 const addProductComment = async (req, res, next) => {
-  const { username, rating, comment, userId, productId } = req.body;
+  const { username, rating, comment, userId, productId, userImage, commentId } =
+    req.body;
   const product = await Product.findById(productId);
 
   product.comments.push({
@@ -77,6 +78,8 @@ const addProductComment = async (req, res, next) => {
     rating: rating,
     comment: comment,
     owner: userId,
+    userImage: userImage,
+    commentId: commentId,
   });
 
   await product.save();
@@ -84,9 +87,38 @@ const addProductComment = async (req, res, next) => {
   return res.status(200).json({ message: "Successfully added review!" });
 };
 
+const deleteProductComment = async (req, res, next) => {
+  const { commentId, productId } = req.body;
+  const product = await Product.findById(productId);
+
+  // product.comments.forEach((c, i) => {
+  //   if (c.commentId == commentId) {
+  //     product.comments.splice(i, 1);
+  //   }
+  // });
+  let i = 0;
+  for (const comment of product.comments) {
+    if (comment.commentId == commentId) {
+      product.comments.splice(i, 1);
+      await product.save();
+      return res
+        .status(200)
+        .json({ message: "Your comment has been deleted successfully!" });
+    }
+    i++;
+  }
+
+  return res.status(200).json({ message: "Comment not found!" });
+
+  // return res
+  //   .status()
+  //   .json({ message: "Your comment has been deleted successfully!" });
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
   getProductById,
   addProductComment,
+  deleteProductComment,
 };
