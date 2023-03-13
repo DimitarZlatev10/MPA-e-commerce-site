@@ -8,7 +8,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s linear;
 }
 
@@ -294,6 +294,7 @@
   margin-right: 10px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 20px;
 }
 
 .comment-section-container-background {
@@ -343,6 +344,19 @@
   font-size: 20px;
   color: purple;
 } */
+
+.product-container > p {
+  position: absolute;
+  left: 55%;
+  top: 110px;
+  text-align: center;
+  font-size: 20px;
+  color: purple;
+}
+
+.product-container > p > span {
+  color: gray;
+}
 
 .product-container > h2 {
   position: absolute;
@@ -405,7 +419,7 @@
   justify-content: space-between;
 }
 
-.rating-container > #username {
+/* .rating-container > #username {
   border: 1px solid pink;
   width: 200px;
   padding: 10px 10px 10px 5px;
@@ -415,14 +429,15 @@
 
 .rating-container > #username::placeholder {
   font-size: 15px;
-}
+} */
 
 .rating-container > #rating {
   border: 1px solid pink;
-  width: 80px;
+  width: 90px;
   padding: 10px 10px 10px 5px;
   margin-top: 20px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .rating-container > #rating::placeholder {
@@ -466,6 +481,22 @@
   margin-top: 50px;
   border-radius: 5px;
   margin-bottom: 40px;
+  position: relative;
+}
+
+.delete-comment {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-comment:hover{
+  color: red;
 }
 
 .comment > h3 {
@@ -508,94 +539,31 @@
   color: green;
 }
 
-/* details-payment  */
-.payment {
-  width: 500px;
-  height: 500px;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  padding: 10px 50px;
-  display: none;
+.noUser {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-  z-index: 10;
 }
 
-.payTitle {
-  font-size: 20px;
-  color: lightgray;
+.noUser > h1 {
+  margin-top: 20px;
 }
 
-label {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.payInput {
-  padding: 10px;
-  margin: 10px 0px;
-  border: none;
-  border-bottom: 1px solid gray;
-}
-
-.payInput::placeholder {
-  color: rgb(170, 167, 167);
-}
-
-.cardIcons {
-  display: flex;
-}
-
-.cardIcon {
-  margin-right: 10px;
-}
-
-.cardInfo {
-  display: flex;
-  justify-content: space-between;
-}
-
-.sm {
-  width: 30%;
-}
-
-.payButton {
-  position: absolute;
-  height: 40px;
-  bottom: -40px;
-  width: 100%;
-  left: 0;
-  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
-  background-color: #369e62;
+.noUser > a {
+  background-color: rgb(0, 179, 255);
+  padding: 15px 25px 15px 25px;
+  border-radius: 5px;
+  margin-top: 15px;
   color: white;
-  border: none;
+  font-size: 20px;
   cursor: pointer;
+  margin-bottom: 2px;
 }
 
-.payButton:hover {
-  background-color: green;
+.noUser > a:hover {
+  opacity: 0.7;
 }
-
-.close {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: red;
-}
-/* details-payment */
 
 /* details  */
 
